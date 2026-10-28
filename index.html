@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Montano - Unit 3 Grammar Interactive Guide</title>
+    <!-- Tailwind CSS for modern responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        montanoBlue: '#1269A8',
+                        montanoYellow: '#F7D615',
+                        montanoTeal: '#54887D',
+                        montanoLightBlue: '#88B5C7',
+                        montanoOlive: '#A6B046',
+                        montanoBg: '#F2F5E9'
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #e2e8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        /* Custom scrollbar for tabs and cards */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F2F5E9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #88B5C7;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="p-2 sm:p-6 min-h-screen flex flex-col items-center">
+
+    <!-- Whiteboard Frame Container -->
+    <div id="whiteboard-container" class="w-full max-w-6xl bg-montanoBg rounded-[12px] shadow-2xl border-4 border-montanoYellow flex flex-col overflow-hidden transition-all duration-300">
+        
+        <!-- Header Bar -->
+        <header class="bg-montanoBlue text-white p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-b-4 border-montanoYellow">
+            <div class="flex items-center gap-4">
+                <!-- Institutional Logo -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyEop0yf6lZ7Jk9MILZxF1rBj4Oqs5esyhIQ&s" alt="Colegio Montano Logo" class="w-14 h-14 object-contain bg-white rounded-lg p-1 shadow-md">
+                <div>
+                    <h1 class="text-xl sm:text-2xl font-bold tracking-wide">Colegio Montano</h1>
+                    <p class="text-montanoYellow text-sm font-semibold">Third Grade | Our World 3 (NatGeo) - Unit 3 Grammar</p>
+                </div>
+            </div>
+            <!-- Fullscreen Toggle Button -->
+            <button onclick="toggleFullScreen()" class="bg-montanoYellow text-montanoBlue font-bold px-4 py-2 rounded-lg shadow hover:bg-yellow-300 transition flex items-center gap-2 text-sm">
+                <span>[ ⛶ Fullscreen ]</span>
+            </button>
+        </header>
+
+        <!-- Horizontal Navigation Tabs -->
+        <nav class="bg-montanoTeal px-4 pt-3 flex flex-wrap gap-2 border-b-2 border-montanoLightBlue">
+            <button onclick="switchTab('theory')" class="tab-btn px-4 py-2 rounded-t-lg font-bold text-sm sm:text-base transition bg-montanoBg text-montanoBlue shadow-inner" data-target="theory">
+                📚 Theory
+            </button>
+            <button onclick="switchTab('examples')" class="tab-btn px-4 py-2 rounded-t-lg font-bold text-sm sm:text-base transition bg-montanoTeal text-white hover:bg-opacity-80" data-target="examples">
+                💡 Examples (15)
+            </button>
+            <button onclick="switchTab('exercises')" class="tab-btn px-4 py-2 rounded-t-lg font-bold text-sm sm:text-base transition bg-montanoTeal text-white hover:bg-opacity-80" data-target="exercises">
+                ✍️ Exercises (15)
+            </button>
+            <button onclick="switchTab('reflection')" class="tab-btn px-4 py-2 rounded-t-lg font-bold text-sm sm:text-base transition bg-montanoTeal text-white hover:bg-opacity-80" data-target="reflection">
+                🤔 Critical Reflection
+            </button>
+            <button onclick="switchTab('evaluation')" class="tab-btn px-4 py-2 rounded-t-lg font-bold text-sm sm:text-base transition bg-montanoTeal text-white hover:bg-opacity-80" data-target="evaluation">
+                📝 Formative Quiz
+            </button>
+        </nav>
+
+        <!-- Main Workspace Content Area -->
+        <main class="p-4 sm:p-8 flex-1 overflow-y-auto">
+
+            <!-- TAB 1: THEORY -->
+            <section id="theory" class="tab-content space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-montanoBlue">
+                    <h2 class="text-2xl font-bold text-montanoBlue mb-3">Unit 3 Grammar: Getting Around Town</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Welcome to Unit 3! In this digital whiteboard guide, we will master two key grammar structures from <strong>Our World 3</strong>: using <strong>"too" for agreeing</strong> with affirmative and negative statements, and using <strong>"but" as a contrast</strong> to connect two different ideas.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Grammar 1 Card -->
+                    <div class="bg-montanoLightBlue bg-opacity-20 p-6 rounded-xl border-2 border-montanoBlue shadow-md">
+                        <span class="bg-montanoOlive text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Grammar 1</span>
+                        <h3 class="text-xl font-bold text-montanoBlue mt-2 mb-3">"Too" for Agreeing</h3>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+                            We use expressions with <strong>too</strong> or auxiliary verbs (do / don't / does / doesn't) to show agreement or disagreement with someone's statement.
+                        </p>
+                        <div class="bg-white p-4 rounded-lg border border-montanoTeal text-sm space-y-2">
+                            <p><strong>Affirmative Agreement:</strong><br><em>Statement:</em> I ride my bike.<br><em>Agreement:</em> I do, <strong>too</strong>. / Her friend does, <strong>too</strong>.</p>
+                            <hr class="border-dashed">
+                            <p><strong>Negative Agreement / Not Agreeing:</strong><br><em>Statement:</em> I ride my bike.<br><em>Not agreeing:</em> I <strong>don't</strong>. / Her friend <strong>doesn't</strong>. / I walk.</p>
+                            <p class="text-xs text-gray-500 italic mt-2">Note: don't = do not | doesn't = does not</p>
+                        </div>
+                    </div>
+
+                    <!-- Grammar 2 Card -->
+                    <div class="bg-montanoLightBlue bg-opacity-20 p-6 rounded-xl border-2 border-montanoTeal shadow-md">
+                        <span class="bg-montanoOlive text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Grammar 2</span>
+                        <h3 class="text-xl font-bold text-montanoTeal mt-2 mb-3">"But" as a Contrast</h3>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+                            We use the conjunction <strong>but</strong> to connect two contrasting or opposite ideas in a single sentence.
+                        </p>
+                        <div class="bg-white p-4 rounded-lg border border-montanoBlue text-sm space-y-2">
+                            <p><strong>Structure:</strong><br>[First Idea], <strong>but</strong> [Second contrasting idea].</p>
+                            <hr class="border-dashed">
+                            <p><strong>Example:</strong><br><em>My sister takes a taxi to the mall,</em> <strong>but</strong> <em>my brother rides his bike.</em></p>
+                            <p class="text-xs text-gray-500 italic mt-2">Notice the comma before "but" when connecting two complete clauses!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: EXAMPLES (15 total: 5 basic, 5 intermediate, 5 advanced) -->
+            <section id="examples" class="tab-content hidden space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-montanoTeal">
+                    <h2 class="text-2xl font-bold text-montanoTeal mb-2">Resolved Examples (15 Total)</h2>
+                    <p class="text-gray-600 text-sm">Review these solved examples across Basic, Intermediate, and Advanced levels based on Our World 3.</p>
+                </div>
+
+                <!-- Basic Level Examples -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-montanoOlive text-white px-3 py-1 rounded-lg text-sm font-bold">Basic Level (1-5)</span>
+                        <span class="text-gray-500 text-xs">Direct agreement & basic contrast sentences</span>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 1 (Grammar 1)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Statement:</strong> I walk to school. <br><strong>Agreement:</strong> My friend does, <em>too</em>.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Uses auxiliary "does" and "too" to agree with an affirmative statement about a third-person singular subject.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 2 (Grammar 1)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Statement:</strong> Eva takes the bus. <br><strong>Disagreement:</strong> I <em>don't</em>. I walk.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Uses "don't" (do not) to express disagreement and states an alternative action.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 3 (Grammar 2)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Sentences:</strong> My sister walks to school. My brother rides his bike to school. <br><strong>With "but":</strong> My sister walks to school, <em>but</em> my brother rides his bike to school.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Combines two independent clauses showing different ways of getting to school using "but".</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 4 (Grammar 2)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Sentences:</strong> A penguin can swim. It can't fly. <br><strong>With "but":</strong> A penguin can swim, <em>but</em> it can't fly.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Contrasts an ability (swimming) with an inability (flying).</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 5 (Grammar 1)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Statement:</strong> My grandfather takes a ferry. <br><strong>Agreement:</strong> I do, <em>too</em>.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Uses "I do, too" to agree with a statement about transportation.</p>
+                    </div>
+                </div>
+
+                <!-- Intermediate Level Examples -->
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-montanoBlue text-white px-3 py-1 rounded-lg text-sm font-bold">Intermediate Level (6-10)</span>
+                        <span class="text-gray-500 text-xs">Complex family transportation charts & combined ideas</span>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 6 (Grammar 1 & Family Chart)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Context:</strong> Maya walks to school. Her brother doesn't. He takes the subway.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Contrasts Maya's mode of transport with her brother's using "doesn't" and an alternate action.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 7 (Grammar 1)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Context:</strong> Maya's father takes the subway to work. Her mother takes a ferry.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Demonstrates differences in parents' travel methods.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 8 (Grammar 2)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Sentences:</strong> She walks to the movie theater. She takes a bus to the mall. <br><strong>Combined:</strong> She walks to the movie theater, <em>but</em> she takes a bus to the mall.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Connects two actions performed by the same person to different destinations.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 9 (Grammar 2)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Sentences:</strong> The girl is smiling. The boy is frowning. <br><strong>Combined:</strong> The girl is smiling, <em>but</em> the boy is frowning.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Contrasts two emotional expressions.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 10 (Grammar 1)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Statement:</strong> My friend rides a motorcycle to the post office. <br><strong>Response:</strong> I <em>don't</em>. I take a bus.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Expresses personal disagreement with someone else's vehicle choice.</p>
+                    </div>
+                </div>
+
+                <!-- Advanced Level Examples -->
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-montanoTeal text-white px-3 py-1 rounded-lg text-sm font-bold">Advanced Level (11-15)</span>
+                        <span class="text-gray-500 text-xs">Multi-clause contrast and complex conversational agreement</span>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 11 (Grammar 2)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Sentences:</strong> I don't like to pedal uphill. I like to coast downhill. <br><strong>Combined:</strong> I don't like to pedal uphill, <em>but</em> I like to coast downhill.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Balances a negative preference with a positive preference using "but".</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 12 (Grammar 1 & 2 Combined)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Context:</strong> Maya rides her bike to the library. Her brother does, <em>too</em>, <em>but</em> their mother takes the bus.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Integrates agreement ("does, too") with a contrast ("but") in a compound sentence.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 13 (Grammar 2)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Sentences:</strong> He eats snacks after school. He always eats his dinner. <br><strong>Combined:</strong> He eats snacks after school, <em>but</em> he always eats his dinner.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Connects two daily routine habits with a contrast conjunction.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 14 (Grammar 1)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Statement:</strong> My mother takes a bus to the supermarket. <br><strong>Agreement:</strong> My father does, <em>too</em>, <em>not</em> me (I walk).</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Advanced multi-person reaction involving agreement and personal contrast.</p>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-montanoLightBlue shadow-sm">
+                        <p class="font-bold text-montanoBlue text-sm">Example 15 (Grammar 2)</p>
+                        <p class="text-gray-700 text-sm mt-1"><strong>Sentences:</strong> My mother likes bread. My father likes meat. <br><strong>Combined:</strong> My mother likes bread, <em>but</em> my father likes meat.</p>
+                        <p class="text-xs text-montanoTeal mt-2 bg-montanoBg p-2 rounded"><strong>Explanation:</strong> Contrasting preferences between two family members.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: EXERCISES (15 total with hidden step-by-step solutions) -->
+            <section id="exercises" class="tab-content hidden space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-montanoBlue">
+                    <h2 class="text-2xl font-bold text-montanoBlue mb-2">Practical Exercises (15 Total)</h2>
+                    <p class="text-gray-600 text-sm">Test your skills! Try solving each exercise, then click <strong>"Show Solution"</strong> to check your answer and step-by-step breakdown.</p>
+                </div>
+
+                <!-- Basic Exercises (1-5) -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-montanoOlive text-white px-3 py-1 rounded-lg text-sm font-bold">Basic Level Exercises</span>
+                    </div>
+
+                    <!-- Ex 1 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">1. Complete the sentence with <span class="text-montanoBlue">do, too</span> or <span class="text-montanoBlue">don't</span>:</p>
+                        <p class="text-gray-700 italic">Statement: My friend walks to the museum. <br>Your response: I _________.</p>
+                        <button onclick="toggleSolution('sol-1')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-1" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> do, too</p>
+                            <p><strong>Step-by-step:</strong> 1. Identify that the statement is affirmative ("walks"). 2. Use "I do, too" to agree with a first-person perspective.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 2 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">2. Complete the sentence:</p>
+                        <p class="text-gray-700 italic">Statement: He rides a motorcycle to the post office. <br>Your response: I _________.</p>
+                        <button onclick="toggleSolution('sol-2')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-2" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> don't. I take a bus. (or similar disagreement)</p>
+                            <p><strong>Step-by-step:</strong> 1. Recognize the statement involves riding a motorcycle. 2. To disagree, use "don't" and add your own action.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 3 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">3. Rewrite using <span class="text-montanoBlue">but</span>:</p>
+                        <p class="text-gray-700 italic">I don't like to pedal uphill. I like to coast downhill.</p>
+                        <button onclick="toggleSolution('sol-3')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-3" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> I don't like to pedal uphill, but I like to coast downhill.</p>
+                            <p><strong>Step-by-step:</strong> 1. Remove the period between the two contrasting sentences. 2. Insert a comma and the conjunction "but".</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 4 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">4. Rewrite using <span class="text-montanoBlue">but</span>:</p>
+                        <p class="text-gray-700 italic">She walks to the movie theater. She takes a bus to the mall.</p>
+                        <button onclick="toggleSolution('sol-4')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-4" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> She walks to the movie theater, but she takes a bus to the mall.</p>
+                            <p><strong>Step-by-step:</strong> 1. Combine clauses. 2. Use comma + "but" to show destination contrast.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 5 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">5. Complete the agreement:</p>
+                        <p class="text-gray-700 italic">Statement: Eva takes the bus to school. <br>Friend's response: Her friend _________.</p>
+                        <button onclick="toggleSolution('sol-5')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-5" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> does, too.</p>
+                            <p><strong>Step-by-step:</strong> 1. Subject is third-person singular ("Her friend"). 2. Use auxiliary "does" + "too" for affirmative agreement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intermediate Exercises (6-10) -->
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-montanoBlue text-white px-3 py-1 rounded-lg text-sm font-bold">Intermediate Level Exercises</span>
+                    </div>
+
+                    <!-- Ex 6 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">6. Complete based on family chart:</p>
+                        <p class="text-gray-700 italic">Maya walks to school. Her brother _________. He takes the subway.</p>
+                        <button onclick="toggleSolution('sol-6')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-6" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> doesn't</p>
+                            <p><strong>Step-by-step:</strong> 1. Brother takes the subway, so he does not walk. 2. Use negative auxiliary "doesn't" for third-person singular.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 7 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">7. Complete the sentence:</p>
+                        <p class="text-gray-700 italic">Maya's father takes the subway to work. Her mother _________. She takes a ferry.</p>
+                        <button onclick="toggleSolution('sol-7')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-7" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> doesn't. (or takes a ferry)</p>
+                            <p><strong>Step-by-step:</strong> 1. Contrast mother's transport with father's using negative auxiliary or direct statement.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 8 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">8. Rewrite using <span class="text-montanoBlue">but</span>:</p>
+                        <p class="text-gray-700 italic">He eats snacks after school. He always eats his dinner.</p>
+                        <button onclick="toggleSolution('sol-8')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-8" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> He eats snacks after school, but he always eats his dinner.</p>
+                            <p><strong>Step-by-step:</strong> 1. Join both sentences with ", but".</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 9 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">9. Rewrite using <span class="text-montanoBlue">but</span>:</p>
+                        <p class="text-gray-700 italic">A penguin can swim. It can't fly.</p>
+                        <button onclick="toggleSolution('sol-9')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-9" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> A penguin can swim, but it can't fly.</p>
+                            <p><strong>Step-by-step:</strong> 1. Connect ability and limitation using comma and "but".</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 10 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">10. Complete agreement:</p>
+                        <p class="text-gray-700 italic">Statement: My grandfather takes a ferry. <br>Response: I _________.</p>
+                        <button onclick="toggleSolution('sol-10')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-10" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> do, too.</p>
+                            <p><strong>Step-by-step:</strong> 1. Subject is "I". 2. Affirmative agreement requires "do, too".</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Exercises (11-15) -->
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-montanoTeal text-white px-3 py-1 rounded-lg text-sm font-bold">Advanced Level Exercises</span>
+                    </div>
+
+                    <!-- Ex 11 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">11. Combine into one sentence with <span class="text-montanoBlue">but</span>:</p>
+                        <p class="text-gray-700 italic">The girl is smiling. The boy is frowning.</p>
+                        <button onclick="toggleSolution('sol-11')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-11" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> The girl is smiling, but the boy is frowning.</p>
+                            <p><strong>Step-by-step:</strong> 1. Identify contrast in facial expressions. 2. Link with ", but".</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 12 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">12. Complete your personal travel sentence:</p>
+                        <p class="text-gray-700 italic">I ___________________________________ to ___________________________________.</p>
+                        <button onclick="toggleSolution('sol-12')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-12" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer Example:</strong> I walk to school. (or I take a bus to the park.)</p>
+                            <p><strong>Step-by-step:</strong> 1. Choose your personal transport method. 2. Add destination preposition "to".</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 13 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">13. Rewrite using <span class="text-montanoBlue">but</span>:</p>
+                        <p class="text-gray-700 italic">My mother likes bread. My father likes meat.</p>
+                        <button onclick="toggleSolution('sol-13')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-13" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> My mother likes bread, but my father likes meat.</p>
+                            <p><strong>Step-by-step:</strong> 1. Connect two distinct food preferences with comma and "but".</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 14 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">14. Complete agreement and disagreement:</p>
+                        <p class="text-gray-700 italic">Statement: Maya's brother rides his bike to the library. <br>Maya's response: I _________.</p>
+                        <button onclick="toggleSolution('sol-14')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-14" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer:</strong> do, too. (or don't, I walk.)</p>
+                            <p><strong>Step-by-step:</strong> 1. Decide whether Maya agrees or disagrees based on context, using correct auxiliary verbs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Ex 15 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">15. Advanced Multi-Clause Challenge:</p>
+                        <p class="text-gray-700 italic">Combine: He takes the subway to school. His friend takes the bus. You walk.</p>
+                        <button onclick="toggleSolution('sol-15')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Solution</button>
+                        <div id="sol-15" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Answer Example:</strong> He takes the subway to school, but his friend takes the bus, and I walk.</p>
+                            <p><strong>Step-by-step:</strong> 1. Link contrasting modes of transport with "but" and additional coordinating conjunctions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: CRITICAL REFLECTION -->
+            <section id="reflection" class="tab-content hidden space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-montanoTeal">
+                    <h2 class="text-2xl font-bold text-montanoTeal mb-2">Critical Reflection Questions</h2>
+                    <p class="text-gray-600 text-sm">Think critically about how we communicate agreement and differences in our daily lives and travels around town.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl border border-montanoLightBlue shadow-sm space-y-3">
+                        <span class="bg-montanoBlue text-white text-xs font-bold px-3 py-1 rounded-full">Question 1</span>
+                        <h3 class="font-bold text-gray-800 text-base">Why is it important to use words like "too" when talking with friends?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Think about how agreeing builds connections and shared experiences. When someone says they ride a bike to school, saying "I do, too" shows shared interests and empathy.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-montanoLightBlue shadow-sm space-y-3">
+                        <span class="bg-montanoTeal text-white text-xs font-bold px-3 py-1 rounded-full">Question 2</span>
+                        <h3 class="font-bold text-gray-800 text-base">How does the word "but" help us describe variety in a city?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Cities have many different people doing different things. The word "but" lets us compare contrasting actions—like one person taking a ferry while another takes the subway—in a single, clear sentence.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-montanoLightBlue shadow-sm space-y-3">
+                        <span class="bg-montanoOlive text-white text-xs font-bold px-3 py-1 rounded-full">Question 3</span>
+                        <h3 class="font-bold text-gray-800 text-base">When should you use "don't" instead of "too" in a conversation?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            We use "don't" or "doesn't" when our habits or experiences are different from the other person's, allowing us to express our individuality respectfully.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-montanoLightBlue shadow-sm space-y-3">
+                        <span class="bg-montanoBlue text-white text-xs font-bold px-3 py-1 rounded-full">Question 4</span>
+                        <h3 class="font-bold text-gray-800 text-base">How do transportation choices affect our environment?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Comparing walking, biking, buses, and cars helps us think about sustainable travel and keeping our city clean.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: FORMATIVE EVALUATION QUIZ -->
+            <section id="evaluation" class="tab-content hidden space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-8 border-montanoBlue">
+                    <h2 class="text-2xl font-bold text-montanoBlue mb-2">Formative Quiz with Hidden Solutions</h2>
+                    <p class="text-gray-600 text-sm">Test your mastery of Unit 3 Grammar 1 & 2. Reveal answers to check your understanding.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Quiz 1 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">Q1: Which sentence correctly shows agreement with an affirmative statement?</p>
+                        <p class="text-gray-700 text-sm">A) I ride my bike. I don't.<br>B) I ride my bike. I do, too.<br>C) I ride my bike. But I walk.</p>
+                        <button onclick="toggleSolution('quiz-1')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Answer</button>
+                        <div id="quiz-1" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Correct Answer: B) I ride my bike. I do, too.</strong></p>
+                            <p><strong>Explanation:</strong> "I do, too" is the standard structure for agreeing with an affirmative statement.</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz 2 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">Q2: What is the correct conjunction to show contrast between two clauses?</p>
+                        <p class="text-gray-700 text-sm">A) and<br>B) because<br>C) but</p>
+                        <button onclick="toggleSolution('quiz-2')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Answer</button>
+                        <div id="quiz-2" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Correct Answer: C) but</strong></p>
+                            <p><strong>Explanation:</strong> "But" connects opposing or contrasting ideas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Quiz 3 -->
+                    <div class="bg-white p-5 rounded-xl border-2 border-montanoLightBlue shadow-sm space-y-3">
+                        <p class="font-bold text-gray-800 text-sm">Q3: If Maya takes the subway and her brother does not, how do we write it?</p>
+                        <p class="text-gray-700 text-sm">A) Maya takes the subway. Her brother doesn't.<br>B) Maya takes the subway. Her brother does, too.<br>C) Maya takes the subway, but her brother takes the subway.</p>
+                        <button onclick="toggleSolution('quiz-3')" class="bg-montanoTeal text-white text-xs font-bold px-3 py-1.5 rounded hover:bg-opacity-90 transition">Show Answer</button>
+                        <div id="quiz-3" class="hidden mt-2 p-3 bg-montanoBg rounded-lg border border-montanoTeal text-xs space-y-1">
+                            <p><strong>Correct Answer: A) Maya takes the subway. Her brother doesn't.</strong></p>
+                            <p><strong>Explanation:</strong> "Doesn't" correctly reflects disagreement for third-person singular (her brother).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-montanoBlue text-white text-center py-3 text-xs border-t-2 border-montanoYellow">
+            Colegio Montano &copy; 2026 | Interactive Digital Whiteboard for Canvas Education
+        </footer>
+    </div>
+
+    <!-- JavaScript for Tab Switching, Fullscreen, and Solution Toggles -->
+    <script>
+        function switchTab(targetId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(el => el.classList.add('hidden'));
+
+            // Show target tab content
+            document.getElementById(targetId).classList.remove('hidden');
+
+            // Update button styles
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                if(btn.getAttribute('data-target') === targetId) {
+                    btn.classList.remove('bg-montanoTeal', 'text-white');
+                    btn.classList.add('bg-montanoBg', 'text-montanoBlue', 'shadow-inner');
+                } else {
+                    btn.classList.remove('bg-montanoBg', 'text-montanoBlue', 'shadow-inner');
+                    btn.classList.add('bg-montanoTeal', 'text-white');
+                }
+            });
+        }
+
+        function toggleSolution(id) {
+            const solDiv = document.getElementById(id);
+            if (solDiv.classList.contains('hidden')) {
+                solDiv.classList.remove('hidden');
+            } else {
+                solDiv.classList.add('hidden');
+            }
+        }
+
+        function toggleFullScreen() {
+            const container = document.getElementById('whiteboard-container');
+            if (!document.fullscreenElement) {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.webkitRequestFullscreen) {
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) {
+                    container.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
